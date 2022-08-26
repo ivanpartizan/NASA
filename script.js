@@ -10,6 +10,10 @@ async function getImage() {
   const data = await response.json();
   console.log(data);
 
+  displayData(data);
+}
+
+function displayData(data) {
   title.innerHTML = data.title;
   explanation.innerHTML = data.explanation;
   img.src = data.url;
