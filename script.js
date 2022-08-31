@@ -1,6 +1,7 @@
 const title = document.querySelector(".title");
 const explanation = document.querySelector(".explanation");
 const img = document.querySelector(".image");
+const button = document.querySelector("#button");
 
 const KEY = "xmAlecrqnW8qaQCFDCUjvMilCXosWTwBfUXNvyzw";
 const API_URL = `https://api.nasa.gov/planetary/apod?api_key=${KEY}`;
@@ -19,4 +20,4 @@ function displayData(data) {
   img.src = data.url;
 }
 
-getImage();
+button.addEventListener("click", getImage);
